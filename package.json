@@ -1,8 +1,9 @@
 {
-  "name": "user-profile-native",
-  "version": "0.0.6",
+  "name": "@bdevrepo/user-profile-native",
+  "version": "0.0.7",
   "description": "bDev-user-profile-native",
   "main": "lib/commonjs/index",
+  "author": "bDev",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
@@ -37,9 +38,10 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/bdevrepo/user-profile-native/user-profile-native",
-  "author": "bDev <info.bdev@gmail.com> (https://github.com/bdevrepo/user-profile-native)",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bdevrepo/user-profile.git"
+  },  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bdevrepo/user-profile-native/user-profile-native/issues"
   },
