@@ -1,0 +1,58 @@
+Arguments: 
+  /home/angelo/.nvm/versions/node/v8.1.0/bin/node /home/angelo/.nvm/versions/node/v8.1.0/bin/yarn --cwd example
+
+PATH: 
+  /tmp/yarn--1604316985853-0.9360207093336803:/home/angelo/demos/awesome-module-react-native/node_modules/.bin:/home/angelo/.config/yarn/link/node_modules/.bin:/home/angelo/.nvm/versions/node/v8.1.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/angelo/.nvm/versions/node/v8.1.0/lib/node_modules/npm/bin/node-gyp-bin:/home/angelo/.nvm/versions/node/v8.1.0/bin/node_modules/npm/bin/node-gyp-bin:/tmp/yarn--1604316985567-0.44887873288663105:/home/angelo/demos/awesome-module-react-native/node_modules/.bin:/home/angelo/.config/yarn/link/node_modules/.bin:/home/angelo/.nvm/versions/node/v8.1.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/angelo/.nvm/versions/node/v8.1.0/lib/node_modules/npm/bin/node-gyp-bin:/home/angelo/.nvm/versions/node/v8.1.0/bin/node_modules/npm/bin/node-gyp-bin:/home/angelo/.sdkman/candidates/gradle/current/bin:/home/angelo/.nvm/versions/node/v8.1.0/bin:/home/angelo/.local/bin:JAVA_HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/angelo/Android/Sdk/emulator:/home/angelo/Android/Sdk/tools:/home/angelo/Android/Sdk/tools/bin:/home/angelo/Android/Sdk/platform-tools:/home/angelo/.yarn/bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  8.1.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com:443
+      at Object.exports._errnoException (util.js:1014:11)
+      at errnoException (dns.js:55:15)
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:91:26)
+
+npm manifest: 
+  {
+    "name": "user-profile-native-example",
+    "description": "Example app for user-profile-native",
+    "version": "0.0.1",
+    "private": true,
+    "main": "index",
+    "scripts": {
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "start": "expo start",
+      "test": "jest"
+    },
+    "dependencies": {
+      "expo": "^38.0.0",
+      "expo-splash-screen": "^0.3.1",
+      "react": "16.11.0",
+      "react-dom": "16.11.0",
+      "react-native": "0.62.2",
+      "react-native-unimodules": "~0.10.1",
+      "react-native-web": "^0.12.3"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.9.6",
+      "@babel/runtime": "^7.9.6",
+      "babel-plugin-module-resolver": "^4.0.0",
+      "babel-preset-expo": "^8.2.3",
+      "expo-cli": "^3.21.12"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
