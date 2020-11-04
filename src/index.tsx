@@ -4,7 +4,7 @@ import { TouchableHighlight, View, FlatList, Image, StyleSheet } from 'react-nat
 const list = [
     {
         id: 1,
-        appLogo: require('../public/images/grid.svg'),
+        appLogo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',//require('../public/images/grid.svg'),
         appUrl: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
         style:"styles.avatar"
     },
