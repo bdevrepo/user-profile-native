@@ -1,7 +1,5 @@
 import React from 'react';
-import { TouchableHighlight, Dimensions, View, FlatList, Image, StyleSheet } from 'react-native';
-
-const DeviceWidth = Dimensions.get('window').width;
+import { TouchableHighlight, View, FlatList, Image, StyleSheet } from 'react-native';
 
 const list = [
     {

@@ -1,6 +1,6 @@
 {
-  "name": "user-profile-native",
-  "version": "0.0.7",
+  "name": "@bdevrepo/user-profile-native",
+  "version": "0.0.8",
   "description": "bDev-user-profile-native",
   "main": "lib/commonjs/index",
   "author": "bDev",
