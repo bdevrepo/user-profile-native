@@ -40,8 +40,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bdevrepo/user-profile.git"
-  },  "license": "MIT",
+    "url": "https://github.com/bdevrepo/user-profile-native.git"
+  },  
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/bdevrepo/user-profile-native/user-profile-native/issues"
   },

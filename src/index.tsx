@@ -4,17 +4,20 @@ import { TouchableHighlight, View, FlatList, Image, StyleSheet } from 'react-nat
 const list = [
     {
         id: 1,
-        appLogo: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
-        appUrl: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'
+        appLogo: require('../public/images/grid.svg'),
+        appUrl: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        style:"styles.avatar"
     },
     {
         id: 2,
         appLogo: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
-        appUrl: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'
+        appUrl: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg',
+        style:"styles.avatar"
     },
 ];
 const GridRow = () => (
     <View style={styles.container}>
+      
         <FlatList
             data={list}
             renderItem={({ item }) => (
@@ -32,9 +35,7 @@ const GridRow = () => (
                 </TouchableHighlight>
 
             )}
-            //Setting the number of column
             numColumns={2}
-        //keyExtractor={(item, index) => index}
         />
     </View>
 );
@@ -53,6 +54,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: 'white',
     },
+    gridIcon:{
+
+    },
+
     gridRow: {
         flex: 1,
         flexDirection: 'column',
@@ -70,5 +75,6 @@ const styles = StyleSheet.create({
         marginVertical: 5,
         fontSize: 20,
     },
+    
 });
 export default Profile
