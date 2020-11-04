@@ -1,11 +1,11 @@
 {
-  "name": "@bdevrepo/user-profile-native",
+  "name": "user-profile-native",
   "version": "0.0.7",
   "description": "bDev-user-profile-native",
   "main": "lib/commonjs/index",
   "author": "bDev",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@bdevrepo"
   },
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
