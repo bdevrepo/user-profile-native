@@ -35,6 +35,10 @@ const list = [
         appUrl: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'
     },
 ];
+const handlerPress =() =>{
+    console.log('Pressed!')
+    
+}
 const GridRow = () => (
     <View style={styles.container}>
         <FlatList
@@ -43,7 +47,7 @@ const GridRow = () => (
                 <TouchableHighlight
                     activeOpacity={0.6}
                     underlayColor="#DDDDDD"
-                    onPress={() => console.log('Pressed!')}>
+                    onPress={() => handlerPress()}>
                     <View
                         style={styles.gridRow}>
                         <Image

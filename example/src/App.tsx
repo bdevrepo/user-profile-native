@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
 //import Profile from 'user-profile-native';
 //import UserGridMenu from 'user-profile-native';
-import UserProfile from '@bdevrepo/user-profile-native';
+import Profile from '@bdevrepo/user-profile-native';
 
 export default function App() {
 //  const [result, setResult] = React.useState<number | undefined>();
@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-        <UserProfile/> 
+        <Profile/> 
     </View>
   );
 }

@@ -5,17 +5,17 @@ user-profile-native
 ## Installation
 
 ```sh
-npm install user-profile-native
+npm install @bdevrepo/user-profile-native
 ```
 
 ## Usage
 
 ```js
-import Profile from "user-profile-native";
+import Profile from "@bdevrepo/user-profile-native";
 
 // ...
 
-const result = await UserProfileNative.multiply(3, 7);
+<Profile/>
 ```
 
 ## Contributing
