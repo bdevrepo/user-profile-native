@@ -35,12 +35,20 @@ const list = [
         appUrl: 'https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg'
     },
 ];
-const handlerPress =() =>{
-    console.log('Pressed!')
-    
+
+
+type GridMenuProps = {
+    onPress:Function,
+
 }
-const GridRow = () => (
-    <View style={styles.container}>
+const UserGridMenu = ({onPress}:GridMenuProps) => {
+    const handlerPress =() =>{
+        //console.log('Pressed: ', onPress)
+        // TODO: open page
+        onPress();
+    }
+    return (
+        <View style={styles.container}>
         <FlatList
             data={list}
             renderItem={({ item }) => (
@@ -64,13 +72,6 @@ const GridRow = () => (
         //keyExtractor={(item, index) => index}
         />
     </View>
-);
-
-const UserGridMenu = () => {
-    return (
-        <View>
-            <GridRow />
-        </View>
     )
 }
 

@@ -24,9 +24,12 @@ const list = [
         subtitle: 'Vice Chairman'
     },
 ]; */
-const UserProfile = () => {
+type GridProfileProps = {
+    onPress:Function,
+}
+const UserProfile = ({onPress}:GridProfileProps) => {
     const onPressLearnMore = () => {
-        console.log('teste');
+        onPress();
     }
     return (
         <View>
