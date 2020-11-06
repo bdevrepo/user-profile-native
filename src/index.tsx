@@ -64,10 +64,10 @@ const GridRow = () => {
                         transparent={true}
                     >
                        {menuVisible?
-                        <UserGridMenu onPress={callbackMenu.bind(this)} />
+                        <UserGridMenu onPress={callbackMenu} />
                         :null}
                         {profileVisible?
-                        <UserProfile onPress={callbackProfile.bind(this)} />
+                        <UserProfile onPress={callbackProfile} />
                         :null}
                     </Modal>
                 </View>

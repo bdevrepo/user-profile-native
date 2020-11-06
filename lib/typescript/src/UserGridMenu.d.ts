@@ -1,3 +1,6 @@
 /// <reference types="react" />
-declare const UserGridMenu: () => JSX.Element;
+declare type GridMenuProps = {
+    onPress: Function;
+};
+declare const UserGridMenu: ({ onPress }: GridMenuProps) => JSX.Element;
 export default UserGridMenu;

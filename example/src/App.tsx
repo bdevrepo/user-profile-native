@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
-//import Profile from 'user-profile-native';
-//import UserGridMenu from 'user-profile-native';
 //import Profile from '@bdevrepo/user-profile-native';
 
 export default function App() {

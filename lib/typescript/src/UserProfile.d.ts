@@ -1,3 +1,6 @@
 /// <reference types="react" />
-declare const UserProfile: () => JSX.Element;
+declare type GridProfileProps = {
+    onPress: Function;
+};
+declare const UserProfile: ({ onPress }: GridProfileProps) => JSX.Element;
 export default UserProfile;
