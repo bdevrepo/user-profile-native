@@ -12,4 +12,5 @@ dist/
 # macOS
 .DS_Store
 yarn.lock
+.npmrc
 package-lock.json

@@ -1,3 +1,4 @@
-/// <reference types="react" />
-declare const Profile: () => JSX.Element;
-export default Profile;
+import React from 'react';
+export default class Profile extends React.Component {
+    render(): JSX.Element;
+}

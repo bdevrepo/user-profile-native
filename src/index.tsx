@@ -32,7 +32,7 @@ const GridRow = () => {
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => {
-                    setMenuVisible(!menuVisible);
+                    setMenuVisible(true);
                     setProfileVisible(false);
                 }}>
                 <View style={styles.gridRow}>
@@ -46,7 +46,7 @@ const GridRow = () => {
                 activeOpacity={0.6}
                 underlayColor="#DDDDDD"
                 onPress={() => {
-                    setProfileVisible(!profileVisible);
+                    setProfileVisible(true);
                     setMenuVisible(false);
                 }}>
                 <View style={styles.gridRow}>
@@ -59,16 +59,18 @@ const GridRow = () => {
 
                 <View>
                     <Modal
-                        //visible={false}
+                        visible={menuVisible}
                         animationType="slide"
                         transparent={true}
                     >
-                       {menuVisible?
                         <UserGridMenu onPress={callbackMenu} />
-                        :null}
-                        {profileVisible?
+                    </Modal>
+                    <Modal
+                        visible={profileVisible}
+                        animationType="slide"
+                        transparent={true}
+                    >
                         <UserProfile onPress={callbackProfile} />
-                        :null}
                     </Modal>
                 </View>
         </View>
