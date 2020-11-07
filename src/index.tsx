@@ -74,13 +74,8 @@ const GridRow = () => {
         </View>
     );
 }
-const Profile = () => {
-    return (
-        <View>
-            <GridRow />
-        </View>
-    )
-}
+
+
 const iconWidth = 40;
 const styles = StyleSheet.create({
     container: {
@@ -105,4 +100,14 @@ const styles = StyleSheet.create({
     },
 
 });
-export default Profile
+export default class Profile extends React.Component {
+    render(){
+
+        return (
+            <View>
+                <GridRow />
+            </View>
+        )
+    }
+    
+}

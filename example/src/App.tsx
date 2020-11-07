@@ -11,7 +11,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-        {/*  <Profile/>  */}
+         {/* <Profile/> */} 
     </View>
   );
 }
