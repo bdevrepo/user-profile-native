@@ -8,6 +8,12 @@ export default function App() {
   return (
     <View>
       <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+        {/* <Profile/> */}
+      </View>
+      <View style={{ flexDirection: 'column', 
+                     justifyContent: 'center', 
+                     marginTop:120 }}>
+        {/* <Dashboard/> */}
       </View>
     
     </View>
