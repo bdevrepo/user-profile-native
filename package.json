@@ -41,7 +41,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/bdevrepo/user-profile-native.git"
-  },  
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bdevrepo/user-profile-native/user-profile-native/issues"
@@ -107,24 +107,6 @@
       }
     }
   },
-  "eslintConfig": {
-    "extends": [
-      "@react-native-community",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
   "eslintIgnore": [
     "node_modules/",
     "lib/"
@@ -145,5 +127,13 @@
       "typescript"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/native": "^5.8.7",
+    "@react-navigation/stack": "^5.12.4",
+    "react-native-gesture-handler": "^1.8.0",
+    "react-native-reanimated": "^1.13.1",
+    "react-native-safe-area-context": "^3.1.8",
+    "react-native-screens": "^2.13.0"
+  }
 }
