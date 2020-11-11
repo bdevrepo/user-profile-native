@@ -28,52 +28,55 @@ const GridRow = () => {
     const [menuVisible, setMenuVisible] = useState(false);
     const [profileVisible, setProfileVisible] = useState(false);
     return (
-        <View style={styles.container}>
-            <TouchableHighlight
-                activeOpacity={0.6}
-                underlayColor="#DDDDDD"
-                onPress={() => {
-                    setMenuVisible(true);
-                    setProfileVisible(false);
-                }}>
-                <View style={styles.gridRow}>
-                    <Image
-                        style={styles.gridIcon}
-                        source={{ uri: list[0].appLogo }}
-                    />
-                </View>
-            </TouchableHighlight>
-            <TouchableHighlight
-                activeOpacity={0.6}
-                underlayColor="#DDDDDD"
-                onPress={() => {
-                    setProfileVisible(true);
-                    setMenuVisible(false);
-                }}>
-                <View style={styles.gridRow}>
-                    <Image
-                        style={styles.avatar}
-                        source={{ uri: list[1].appLogo }}
-                    />
-                </View>
-            </TouchableHighlight>
-
-                <View style={styles.modalView}>
-                    <Modal
-                        visible={menuVisible}
-                        animationType="slide"
-                        transparent={true}
-                    >
-                        <UserGridMenu onPressFunction={callbackMenu} />
-                    </Modal>
-                    <Modal
-                        visible={profileVisible}
-                        animationType="slide"
-                        transparent={true}
-                    >
-                        <UserProfile onPressFunction={callbackProfile} />
-                    </Modal>
-                </View>
+        <View>
+            <View style={styles.container}>
+                <TouchableHighlight
+                    activeOpacity={0.6}
+                    underlayColor="#DDDDDD"
+                    onPress={() => {
+                        setMenuVisible(true);
+                        setProfileVisible(false);
+                    }}>
+                    <View style={styles.gridRow}>
+                        <Image
+                            style={styles.gridIcon}
+                            source={{ uri: list[0].appLogo }}
+                        />
+                    </View>
+                </TouchableHighlight>
+                <TouchableHighlight
+                    activeOpacity={0.6}
+                    underlayColor="#DDDDDD"
+                    onPress={() => {
+                        setProfileVisible(true);
+                        setMenuVisible(false);
+                    }}>
+                    <View style={styles.gridRow}>
+                        <Image
+                            style={styles.avatar}
+                            source={{ uri: list[1].appLogo }}
+                        />
+                    </View>
+                </TouchableHighlight>
+            </View>
+            <View style={styles.modalView}>
+                <Modal
+                    visible={menuVisible}
+                    animationType="slide"
+                    transparent={true}
+                >
+                    <UserGridMenu onPressFunction={() => { callbackMenu }} />
+                </Modal>
+            </View>
+            <View style={styles.modalView}>
+                <Modal
+                    visible={profileVisible}
+                    animationType="slide"
+                    transparent={true}
+                >
+                    <UserProfile onPressFunction={() => { callbackProfile }} />
+                </Modal>
+            </View>
         </View>
     );
 }
@@ -84,7 +87,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
     },
     gridIcon: {
         width: iconWidth,
@@ -102,24 +105,23 @@ const styles = StyleSheet.create({
         marginBottom: 15
     },
     modalView: {
+        justifyContent: 'center',
         margin: 20,
         backgroundColor: "white",
-        borderRadius: 20,
-        padding: 35,
+        borderRadius: 15,
+        padding: 20,
         alignItems: "center",
-        shadowColor: "#000",
-        shadowOffset: {
-          width: 0,
-          height: 2
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5
-      },
+        //shadowOpacity: 0.25,
+        //shadowRadius: 3.84,
+        //elevation: 5,
+        width: '80%',
+        marginLeft: 40  ,
+        borderColor: 'white'
+    },
 
 });
 export default class NavProfile extends React.Component {
-    render(){
+    render() {
 
         return (
             <View>
@@ -127,5 +129,5 @@ export default class NavProfile extends React.Component {
             </View>
         )
     }
-    
+
 }

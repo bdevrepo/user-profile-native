@@ -1,14 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
+import Routes from './routes';
+import { NavigationContainer } from '@react-navigation/native';
 
-import Routes from '../src/routes';
+import 'react-native-gesture-handler';
 
 export default class Profile extends React.Component {
     render(){
         return (
-            <View>
+            <NavigationContainer>
                 <Routes />
-            </View>
+            </NavigationContainer>
         )
     }
     

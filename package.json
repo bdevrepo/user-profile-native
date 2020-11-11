@@ -1,6 +1,6 @@
 {
   "name": "@bdevrepo/user-profile-native",
-  "version": "0.1.4.1",
+  "version": "0.1.5",
   "description": "bDev-user-profile-native",
   "main": "lib/commonjs/index",
   "author": "bDev",
@@ -36,7 +36,9 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "user profile",
+    "grid menu"
   ],
   "repository": {
     "type": "git",
@@ -90,6 +92,6 @@
     "react-native-gesture-handler": "^1.8.0",
     "react-native-reanimated": "^1.13.1",
     "react-native-safe-area-context": "^3.1.8",
-    "react-native-screens": "^2.13.0"
+    "react-native-screens": "^2.14.0"
   }
 }

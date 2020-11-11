@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import NavProfile from '../src/components/NavProfile';
+import NavProfile from './components/NavProfile';
 import AccountDashboard from './pages/AccountDashboard';
 
 function Logout() {
@@ -14,15 +13,12 @@ function Logout() {
 }
 const Stack = createStackNavigator();
 
-const Routes = () =>  (<View>
-        <NavigationContainer>
+const Routes = () =>  (
           <Stack.Navigator initialRouteName="App">
-            <Stack.Screen name="App" component={NavProfile} />
-            <Stack.Screen name="AccoundDashboard" component={AccountDashboard} />
-            <Stack.Screen name="Logout" component={Logout} />
+            <Stack.Screen name="App" component={NavProfile} options={{headerShown: false}}/>
+            <Stack.Screen name="AccountDashboard" component={AccountDashboard} options={{headerShown: false}}/>
+            <Stack.Screen name="Logout" component={Logout} options={{headerShown: false}}/>
           </Stack.Navigator>
-        </NavigationContainer>
-      </View>
     );
 
 export default Routes;
