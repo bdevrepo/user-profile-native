@@ -16,8 +16,11 @@ const list = [
     },
 
 ];
-
-const GridRow = () => {
+type NavProfileProps = {
+    accountPage:String,
+    logoutPage:String
+}
+const NavProfile = ({accountPage,logoutPage}:NavProfileProps) => {
 
     const callbackProfile = () => {
         setProfileVisible(false);
@@ -74,7 +77,10 @@ const GridRow = () => {
                     animationType="slide"
                     transparent={true}
                 >
-                    <UserProfile onPressFunction={() => { callbackProfile }} />
+                    <UserProfile onPressFunction={() => { callbackProfile }} 
+                    accountPage={accountPage}
+                    logoutPage={logoutPage}
+                    />
                 </Modal>
             </View>
         </View>
@@ -120,14 +126,5 @@ const styles = StyleSheet.create({
     },
 
 });
-export default class NavProfile extends React.Component {
-    render() {
-
-        return (
-            <View>
-                <GridRow />
-            </View>
-        )
-    }
-
-}
+export default NavProfile;
+   

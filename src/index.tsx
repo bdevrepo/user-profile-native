@@ -1,16 +1,12 @@
-import React from 'react';
-import Routes from './routes';
-import { NavigationContainer } from '@react-navigation/native';
-
-import 'react-native-gesture-handler';
-
-export default class Profile extends React.Component {
-    render(){
-        return (
-            <NavigationContainer independent={true}>
-                <Routes />
-            </NavigationContainer>
-        )
-    }
-    
+import User from './components/User';
+import UserGridMenu from './components/UserGridMenu';
+import UserProfile from './components/UserProfile';
+import NavProfile from './components/NavProfile';
+import AccountDashboard from './pages/AccountDashboard';
+export {
+    User,
+    UserGridMenu,
+    UserProfile,
+    NavProfile,
+    AccountDashboard
 }

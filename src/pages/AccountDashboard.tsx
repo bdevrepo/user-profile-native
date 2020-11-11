@@ -1,10 +1,6 @@
 import React from 'react';
-import { View, Button } from 'react-native';
-//import User from '../components/User';
-
-{/* <IdentificacaoRequerente/>
-<DireitosArtisticosLiterario/>
-<AutenticacaoAssinatura/> */}
+import { View, Text,Button } from 'react-native';
+import User from '../components/User';
 
 const AccountDashboard = () => {
     const submitHandler =() => {
@@ -12,13 +8,10 @@ const AccountDashboard = () => {
     }
         return (
             <View>
-                {/* <Card>
-                    <Card.Title>Identificação Requerente</Card.Title>
-                    <Card.Divider />
+                    <Text>Identificação Requerente</Text>
                     <View>
-                        <User parentReq={this.callBackReq.bind(this)} />
+                        <User /* parentReq={this.callBackReq.bind(this)} */ />
                     </View>
-                </Card> */}
                 {/* <Card>
                     <Card.Title>Identificação Autor</Card.Title>
                     <Card.Divider />

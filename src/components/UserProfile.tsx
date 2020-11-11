@@ -27,8 +27,10 @@ const list = [
 ]; */
 type GridProfileProps = {
     onPressFunction:Function,
+    accountPage:String,
+    logoutPage:String
 }
-const UserProfile = ({onPressFunction}:GridProfileProps) => {
+const UserProfile = ({onPressFunction,accountPage,logoutPage}:GridProfileProps) => {
     const navigation = useNavigation();
     const onPressGoToPage = (page:any) => {
         console.log('teste');
@@ -48,7 +50,7 @@ const UserProfile = ({onPressFunction}:GridProfileProps) => {
                 <Text style={{ marginBottom: 15 }}>{userDetail.email}</Text>
                 <View style={styles.container}>
                     <Button
-                        onPress={() => {onPressGoToPage('AccountDashboard')}}
+                        onPress={() => {onPressGoToPage(accountPage)}}
                         title="Gerir conta" />
                 </View>
             </View>
@@ -67,7 +69,7 @@ const UserProfile = ({onPressFunction}:GridProfileProps) => {
             <Separator />
             <View style={styles.container}>
                 <Button
-                    onPress={() => {onPressGoToPage('Logout')}}
+                    onPress={() => {onPressGoToPage(logoutPage)}}
                     title="Sair"
                 />
             </View>

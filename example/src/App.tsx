@@ -1,19 +1,25 @@
-//import * as React from 'react';
+import * as React from 'react';
 //import { View } from 'react-native';
-//import Profile from '@bdevrepo/user-profile-native';
+import { NavProfile,AccountDashboard } from '@bdevrepo/user-profile-native';
 //import Dashboard from './DashboardCard';
+import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function App() {
-
+function AccountDash () {
   return (
-    {/* <Profile/> */}
+    <NavProfile accountPage='AccountDashboard'logoutPage='Logout'/>
   );
 }
-{/* <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
-        <Profile/>
-      </View>
-      <View style={{ flexDirection: 'column', 
-                     justifyContent: 'center', 
-                     marginTop:120 }}>
-        <Dashboard/>
-      </View> */}
+export default function App() {
+  const Stack = createStackNavigator();
+
+  return (
+    <NavigationContainer>
+    <Stack.Navigator initialRouteName="App">
+      <Stack.Screen name="App" component={AccountDash} options={{ headerShown: false }} />
+      <Stack.Screen name="Logout" component={NavProfile} options={{ headerShown: false }} />
+      <Stack.Screen name="AccountDashboard" component={AccountDashboard} options={{ headerShown: false }} />
+    </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
