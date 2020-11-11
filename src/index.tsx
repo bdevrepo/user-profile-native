@@ -7,7 +7,7 @@ import 'react-native-gesture-handler';
 export default class Profile extends React.Component {
     render(){
         return (
-            <NavigationContainer>
+            <NavigationContainer independent={true}>
                 <Routes />
             </NavigationContainer>
         )
