@@ -14,3 +14,5 @@ dist/
 yarn.lock
 .npmrc
 package-lock.json
+packager-info.json
+
