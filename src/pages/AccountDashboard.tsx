@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text,Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import PagInicial from '../components/PagInicial';
-import InfPessoal from '../components/InfPessoal';
+
 import { PAGES } from '../store/constants';
 
 
@@ -20,8 +19,7 @@ const AccountDashboard = () => {
                           <Button title='Informações Pessoais' 
                             onPress={() => { navigationHandler(PAGES.INFORMACOES_PESSOAL) }} //INFORMAÇÕES_PESSOAL
                         />
-                        
-
+                       
             </View>
         );
         
