@@ -3,7 +3,7 @@ import { View, Button, Text, SafeAreaView } from 'react-native'
 
 const DashboardCard = () => {
     const onPressLearnMore = () => {
-        console.log('teste');
+        console.log('testes');
     }
     return (
         <SafeAreaView>
