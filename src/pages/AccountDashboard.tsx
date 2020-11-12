@@ -1,38 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text,Button } from 'react-native';
-import User from '../components/User';
+import { useNavigation } from '@react-navigation/native';
+import PagInicial from '../components/PagInicial';
+import InfPessoal from '../components/InfPessoal';
+import { PAGES } from '../store/constants';
+
 
 const AccountDashboard = () => {
-    const submitHandler =() => {
+    const navigation = useNavigation();
+    const navigationHandler =(page:any) => {
+        navigation.navigate(page);
         console.log('teste');
     }
         return (
             <View>
-                    <Text>Identificação Requerente</Text>
-                    <View>
-                        <User /* parentReq={this.callBackReq.bind(this)} */ />
-                    </View>
-                {/* <Card>
-                    <Card.Title>Identificação Autor</Card.Title>
-                    <Card.Divider />
-                    <View>
-                        <IdentificacaoAutor parentReq={this.callBackReq.bind(this)} />
-                    </View>
-                </Card> */}
+                     <Button title='Página Inicial' 
+                            onPress={() => { navigationHandler(PAGES.PAGINA_INICIAL) }} //PAGES.PAGINA_INICIAL
+                        />
+                          <Button title='Informações Pessoais' 
+                            onPress={() => { navigationHandler(PAGES.INFORMACOES_PESSOAL) }} //INFORMAÇÕES_PESSOAL
+                        />
+                        
 
-                {/* <Card>
-                    <Card.Title>Autenticacão Assinatura</Card.Title>
-                    <Card.Divider />
-                    <View>
-                        <AutenticacaoAssinatura />
-                    </View>
-                </Card> */}
-
-                <Button
-                    title="Gravar"
-                    onPress={submitHandler}>Gravar</Button>
             </View>
         );
+        
 }
 
 export default AccountDashboard;

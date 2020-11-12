@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Button, Text, SafeAreaView } from 'react-native'
 
+
 const DashboardCard = () => {
     const onPressLearnMore = () => {
         console.log('testes');
