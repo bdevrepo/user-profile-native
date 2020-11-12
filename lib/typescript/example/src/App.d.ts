@@ -1,1 +1,2 @@
-export default function App(): {};
+/// <reference types="react" />
+export default function App(): JSX.Element;
