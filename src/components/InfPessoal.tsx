@@ -5,6 +5,7 @@ import {
     Text,
     TextInput
 } from 'react-native';
+import  User  from './User';
 
 
 
@@ -17,14 +18,14 @@ const InfPessoal = () => {
     return (
         <View>
 
-            <Text style={styles.titleText}>Informações Pessoais</Text>
+            {/*<Text style={styles.titleText}>Informações Pessoais</Text>
             
             <TextInput
                 placeholder='Perfil'
-                /* style={{ height: 40, borderColor: 'gray', borderWidth: 1 }} */
-                onChangeText={text => setNameReq(text)}
-            />
-
+                /* style={{ height: 40, borderColor: 'gray', borderWidth: 1 }} 
+                onChangeText={text => setNameReq(text)
+            />*/}
+ < User/>
            
         </View>
     );
