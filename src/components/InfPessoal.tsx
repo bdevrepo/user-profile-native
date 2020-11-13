@@ -3,30 +3,27 @@ import {
     StyleSheet,
     View,
     Text,
-    TextInput
+    TextInput,
+    Button
 } from 'react-native';
-import  User  from './User';
+import User from './User';
+import { useNavigation } from '@react-navigation/native';
 
 
 
 const InfPessoal = () => {
 
-    const [nameReq, setNameReq] = useState('');
-   
+    const navigation = useNavigation();
+    const navigationHandler = () => {
+        navigation.goBack()}
 
 
     return (
         <View>
-
-            {/*<Text style={styles.titleText}>Informações Pessoais</Text>
-            
-            <TextInput
-                placeholder='Perfil'
-                /* style={{ height: 40, borderColor: 'gray', borderWidth: 1 }} 
-                onChangeText={text => setNameReq(text)
-            />*/}
- < User/>
-           
+           < User />
+           <Button title='Voltar'
+                onPress={() => { navigationHandler() }} 
+                />
         </View>
     );
 }
