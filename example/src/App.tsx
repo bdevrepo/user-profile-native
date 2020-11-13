@@ -2,6 +2,7 @@ import * as React from 'react';
 //import { View } from 'react-native';
 import { NavProfile,AccountDashboard,PagInicial,InfPessoal } from '@bdevrepo/user-profile-native';
 
+
 //import PagInicial from './components/PagInicial;
 //import InfPessoal from './components/InfPessoal';
 

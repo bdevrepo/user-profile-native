@@ -3,82 +3,41 @@ import {
     StyleSheet,
     View,
     Text,
-    TextInput
+    Button,
+    style,
+    TouchableOpacity
 } from 'react-native';
-
+import { useNavigation } from '@react-navigation/native';
+//import Icons from 'react-native-vector-icons/MaterialIcons';
 
 
 var idetReqData = {};
 
 const PagInicial = () => {
 
-    const [nameReq, setNameReq] = useState('');
-   // const [docTypeReq, setDocTypeReq] = useState('');
-    const [emailReq, setEmailReq] = useState('');
-    const [mobileReq, setMobileReq] = useState('');
-    const [phoneReq, setPhoneReq] = useState('');
-    const [addressReq, setAddressReq] = useState('');
-    const [postalCodeReq, setPostalCodeReq] = useState('');
-    const [placeReq, setPlaceReq] = useState('');
-   // const [countryReq, setCountryReq] = useState('');
-
-    /* const [checkedProprio, setCheckedProprio] = useState(false);
-    const [checkedEditor, setCheckedEditor] = useState(false);
-    const [checkedTitular, setCheckedTitular] = useState(false);
-    const [checkedRepre, setCheckedRepre] = useState(false); */
-
-
-    useEffect(() => {
-        console.log(' A editar');
-        const idenReq = {
-            nameReq: '',
-            docTypeReq: '',
-            emailReq: '',
-            mobileReq: '',
-            phoneReq: '',
-            addressReq: '',
-            postalCodeReq: '',
-            placeReq: '',
-            checkedProprio: '',
-            checkedEditor: '',
-            namecheckedTitularreq: '',
-            checkedRepre: ''
-        }
-
-        idenReq["nameReq"] = nameReq;
-        //idenReq["docTypeReq"] = docTypeReq;
-        idenReq["emailReq"] = emailReq;
-        idenReq["mobileReq"] = mobileReq;
-        idenReq["phoneReq"] = phoneReq;
-        idenReq["addressReq"] = addressReq;
-        idenReq["postalCodeReq"] = postalCodeReq;
-        idenReq["placeReq"] = placeReq;
-
-        // TODO: get value checked
-        /*  idenReq["checkedProprio"] = checkedProprio;
-         idenReq["checkedEditor"] = checkedEditor;
-         idenReq["namecheckedTitularreq"] = checkedTitular;
-         idenReq["checkedRepre"] = checkedRepre; */
-
-        console.log('idetReqData: ', idetReqData);
-    });
+    const navigation = useNavigation();
+    const navigationHandler = () => {
+        navigation.goBack()
+    }
     return (
         <View>
 
-            <Text style={styles.titleText}>Bem-vindo, Hermes Maurício</Text>
-            
-           
+            <text  >Bem-vindo, Hermes Maurício</text>
+            <br>
+            </br>
+            <text>Faça a gestão das suas informações, da privacidade e da segurança para utilizar os serviços do Sistema da forma mais adequada para si</text>
+
+            <Button title='Voltar'
+                onPress={() => { navigationHandler() }} //PAGES.REGISTO_ARTISTICO
+                />
+                {/*
+            <TouchableOpacity onPress={handleBackButtonClick}>
+                {/*<Icons name={'arrow-back'} size={30} color='#fff' style={{ marginLeft: '3%' }} />
+            </TouchableOpacity>*/}
+
         </View>
     );
 }
-const styles = StyleSheet.create({
-    baseText: {
-        fontFamily: "Cochin"
-    },
-    titleText: {
-        fontSize: 20,
-        fontWeight: "bold"
-    }
-});
+
 
 export default PagInicial;
