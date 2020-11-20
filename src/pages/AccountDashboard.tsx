@@ -1,16 +1,21 @@
 import React from 'react';
-import { View, Text,Button } from 'react-native';
+import { View,Button } from 'react-native';
 import User from '../components/User';
 
-const AccountDashboard = () => {
+var allData = {user:null}
+const AccountDashboard = (props:any) => {
+
+    const callBackUser =(data:any) => {
+        //console.log('teste', data);
+        allData["user"]=data;
+    }
     const submitHandler =() => {
-        console.log('teste');
+        props.parentDash(allData);
     }
         return (
-            <View>
-                    <Text>Identificação Requerente</Text>
+            <View style={{backgroundColor:"white"}}>
                     <View>
-                        <User /* parentReq={this.callBackReq.bind(this)} */ />
+                        <User  parentUser={callBackUser.bind(this)} />
                     </View>
                 {/* <Card>
                     <Card.Title>Identificação Autor</Card.Title>
