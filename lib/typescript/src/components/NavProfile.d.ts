@@ -1,4 +1,7 @@
-import React from 'react';
-export default class NavProfile extends React.Component {
-    render(): JSX.Element;
-}
+/// <reference types="react" />
+declare type NavProfileProps = {
+    accountPage: String;
+    logoutPage: String;
+};
+declare const NavProfile: ({ accountPage, logoutPage }: NavProfileProps) => JSX.Element;
+export default NavProfile;

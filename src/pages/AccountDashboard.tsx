@@ -38,6 +38,7 @@ const AccountDashboard = (props:any) => {
                     onPress={submitHandler}>Gravar</Button>
             </View>
         );
+        
 }
 
 export default AccountDashboard;
