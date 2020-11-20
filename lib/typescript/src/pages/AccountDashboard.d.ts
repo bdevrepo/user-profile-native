@@ -1,3 +1,3 @@
 /// <reference types="react" />
-declare const AccountDashboard: () => JSX.Element;
+declare const AccountDashboard: (props: any) => JSX.Element;
 export default AccountDashboard;

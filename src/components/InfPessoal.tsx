@@ -1,9 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
-    StyleSheet,
     View,
-    Text,
-    TextInput,
     Button
 } from 'react-native';
 import User from './User';
@@ -27,14 +24,4 @@ const InfPessoal = () => {
         </View>
     );
 }
-const styles = StyleSheet.create({
-    baseText: {
-        fontFamily: "Cochin"
-    },
-    titleText: {
-        fontSize: 20,
-        fontWeight: "bold"
-    }
-});
-
 export default InfPessoal;

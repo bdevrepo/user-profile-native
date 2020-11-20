@@ -1,6 +1,5 @@
-/* import * as React from 'react';
+ /* import * as React from 'react';
 import { NavProfile, AccountDashboard } from '@bdevrepo/user-profile-native';
-import Dashboard from './DashboardCard';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -32,4 +31,4 @@ const App = ()  => {
     </NavigationContainer>
   );
 }
-export default App; */
+export default App; */ 

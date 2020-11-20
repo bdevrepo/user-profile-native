@@ -15,7 +15,7 @@ const AccountDashboard = (props:any) => {
         return (
             <View style={{backgroundColor:"white"}}>
                     <View>
-                        <User  parentUser={callBackUser.bind(this)} />
+                        <User  parentUser={callBackUser.bind} />
                     </View>
                 {/* <Card>
                     <Card.Title>Identificação Autor</Card.Title>

@@ -1,17 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
-    StyleSheet,
     View,
-    Text,
-    Button,
-    style,
-    TouchableOpacity
+    Button
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-//import Icons from 'react-native-vector-icons/MaterialIcons';
-
-
-var idetReqData = {};
 
 const PagInicial = () => {
 
