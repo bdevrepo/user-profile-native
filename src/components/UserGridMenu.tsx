@@ -1,15 +1,24 @@
 import React from 'react';
-import { Linking, TouchableHighlight, Dimensions, View, FlatList, Text, Image, StyleSheet } from 'react-native';
+import {
+    Linking,
+    TouchableHighlight,
+    Dimensions,
+    View,
+    FlatList,
+    Text,
+    Image,
+    StyleSheet
+} from 'react-native';
 //import { useNavigation } from '@react-navigation/native';
 
 const DeviceWidth = Dimensions.get('window').width;
 
 type GridMenuProps = {
     onPressFunction: Function
-    listApp:[{id: 0,name: '',appLogo: '',appUrl: ''}]
+    listApp: [{ id: 0, name: '', appLogo: '', appUrl: '' }]
 }
 
-const UserGridMenu = ({ onPressFunction,listApp }: GridMenuProps) => {
+const UserGridMenu = ({ onPressFunction, listApp }: GridMenuProps) => {
     //const navigation = useNavigation();
     const handlerPress = (url: any) => {
         //console.log('Pressed: ', onPress)
@@ -18,13 +27,14 @@ const UserGridMenu = ({ onPressFunction,listApp }: GridMenuProps) => {
         Linking.openURL(url);
         onPressFunction();
     }
+    
     return (
         <View style={styles.container}>
             <FlatList
                 data={listApp}
                 renderItem={({ item }) => (
                     <TouchableHighlight
-                        activeOpacity={0.6}
+                        activeOpacity={1}
                         underlayColor="#DDDDDD"
                         onPress={() => { handlerPress(item.appUrl) }}>
                         <View
@@ -48,15 +58,14 @@ const UserGridMenu = ({ onPressFunction,listApp }: GridMenuProps) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        backgroundColor: 'white',
+        justifyContent: "center",
+        alignItems: "center",
     },
     gridRow: {
         flex: 1,
         flexDirection: 'column',
         margin: 15,
-        // marginBottom: 15
+        borderWidth:1
     },
     logo: {
         width: DeviceWidth * 0.1,

@@ -5,3 +5,8 @@ export const PAGES = {
 
 export const COMPONENTS = {
 };
+
+export const CUSTOMON = {
+  COLOR:'#79a5f2'
+};
+

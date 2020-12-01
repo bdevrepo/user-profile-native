@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import {
-    StyleSheet,
     View,
     Text,
-    TextInput,
     Picker,
     CheckBox
 } from 'react-native';
-
+import { FloatingLabelInput, setGlobalStyles } from 'react-native-floating-label-input';
+import GlobalStyles from './../assets/style/GlobalStyles';
 var idetReqData = {};
 
 const User = (props: any) => {
@@ -57,27 +56,33 @@ const User = (props: any) => {
         user["checkedEditor"] = checkedEditor;
         user["namecheckedTitularreq"] = checkedTitular;
         user["checkedRepre"] = checkedRepre;
-        
+
         idetReqData = user;
         //console.log(' A editar', idetReqData);
     });
     return (
-        <View style={styles.container}>
+        <View style={GlobalStyles.container}>
+            <Text style={GlobalStyles.titleText}>Informações pessoais</Text>
 
-            <Text style={styles.titleText}>Informações pessoais</Text>
-            <Text style={styles.baseText}>Nome do requerente</Text>
-            <TextInput
-                style={styles.baseInput}
-                placeholder='Nome do requerente'
+            {/* <FloatingLabelInput
+          label={userNameLabel}
+         // value={username}
+          blurOnSubmit={false}
+          maxLength={100}
+          onChangeText={(value: any) => handleUsernaChange(value)}
+        /> */}
+
+            <FloatingLabelInput
+                label='Nome do requerente'
                 onChangeText={text => {
                     setNameReq(text)
                     props.parentUser(idetReqData);
                 }}
             />
-            <Text style={styles.baseText}>Tipo do documento de identificação</Text>
+            <Text style={GlobalStyles.baseText}>Documento identificação</Text>
 
             <Picker
-                style={styles.baseInput}
+                style={GlobalStyles.baseInput}
                 selectedValue={docTypeReq}
                 onValueChange={(itemValue) => {
                     setDocTypeReq(itemValue);
@@ -89,46 +94,34 @@ const User = (props: any) => {
                 )}
             </Picker>
 
-            <Text style={styles.baseText}>E-mail</Text>
-            <TextInput
-                style={styles.baseInput}
-                placeholder="E-mail"
+            <FloatingLabelInput
+                label="E-mail"
                 onChangeText={text => { setEmailReq(text); props.parentUser(idetReqData); }}
             />
-            <Text style={styles.baseText}>Telefone</Text>
-            <TextInput
-                style={styles.baseInput}
-                placeholder="Telefone"
+            <FloatingLabelInput
+                label="Telefone"
                 onChangeText={text => { setPhoneReq(text); props.parentUser(idetReqData); }}
             />
-            <Text style={styles.baseText}>Telemóvel</Text>
-            <TextInput
-                style={styles.baseInput}
-                placeholder="Telemóvel"
+            <FloatingLabelInput
+                label="Telemóvel"
                 onChangeText={text => { setMobileReq(text); props.parentUser(idetReqData); }}
             />
-            <Text style={styles.baseText}>Morada</Text>
-            <TextInput
-                style={styles.baseInput}
-                placeholder="Morada"
+            <FloatingLabelInput
+                label="Morada"
                 onChangeText={text => { setAddressReq(text); props.parentUser(idetReqData); }}
             />
-            <Text style={styles.baseText}>Codigo Postal</Text>
-            <TextInput
-                style={styles.baseInput}
-                placeholder="Codigo Postal"
+            <FloatingLabelInput
+                label="Codigo Postal"
                 onChangeText={text => { setPostalCodeReq(text); props.parentUser(idetReqData); }}
             />
-            <Text style={styles.baseText}> Localidade </Text>
-            <TextInput
-                style={styles.baseInput}
-                placeholder="Localidade"
+            <FloatingLabelInput
+                label="Localidade"
                 onChangeText={text => { setPlaceReq(text); props.parentUser(idetReqData); }}
             />
 
-            <Text style={styles.baseText}>Pais</Text>
+            <Text style={GlobalStyles.baseText}>Pais</Text>
             <Picker
-                style={styles.baseInput}
+                style={GlobalStyles.baseInput}
                 selectedValue={countryReq}
                 onValueChange={(itemValue) => { setCountryReq(itemValue); props.parentUser(idetReqData); }}
             >
@@ -145,7 +138,7 @@ const User = (props: any) => {
                         props.parentUser(idetReqData);
                     }}
                 />
-                <Text style={styles.checkboxLabel}>O Proprio</Text>
+                <Text style={GlobalStyles.checkboxLabel}>O Proprio</Text>
                 <CheckBox
                     value={checkedEditor}
                     onValueChange={() => {
@@ -153,7 +146,7 @@ const User = (props: any) => {
                         props.parentUser(idetReqData);
                     }}
                 />
-                <Text style={styles.checkboxLabel}>Editor</Text>
+                <Text style={GlobalStyles.checkboxLabel}>Editor</Text>
                 <CheckBox
                     value={checkedRepre}
                     onValueChange={() => {
@@ -161,7 +154,7 @@ const User = (props: any) => {
                         props.parentUser(idetReqData);
                     }}
                 />
-                <Text style={styles.checkboxLabel}>Representante</Text>
+                <Text style={GlobalStyles.checkboxLabel}>Representante</Text>
                 <CheckBox
                     value={checkedTitular}
                     onValueChange={() => {
@@ -169,40 +162,29 @@ const User = (props: any) => {
                         props.parentUser(idetReqData);
                     }}
                 />
-                <Text style={styles.checkboxLabel}>Titular Sucessivo</Text>
+                <Text style={GlobalStyles.checkboxLabel}>Titular Sucessivo</Text>
             </View>
         </View>
     );
 }
-const styles = StyleSheet.create({
-    container: {
-        margin: 10
-    },
-    baseText: {
-        backgroundColor: "white",
-        //fontFamily: "Cochin",
-        marginTop: 10,
-    },
-    titleText: {
-        textAlign: "center",
-        backgroundColor: "white",
-        fontSize: 20,
-        fontWeight: "bold",
-        marginTop: 10,
-        //marginBottom:10
-    },
-    baseInput: {
-        backgroundColor: "white",
-        height: 40,
-        borderWidth: 0,
-        // alignItems: "stretch",
-        borderBottomWidth: 1,
-    },
-    checkboxLabel: {
-        margin: 8,
-        //fontFamily: "Cochin",
-    },
-});
+
+setGlobalStyles.labelStyles = {
+    color: 'black',
+    fontSize:14,
+    // any styles you want to generalize to your floating label
+};
+
+setGlobalStyles.inputStyles = {
+    // any styles you want to generalize to your input
+    color: 'black',
+    borderRadius: 5,
+    minHeight: 40,
+    margin: 8,
+    width: 350,
+    padding: 4,
+    fontSize: 14,
+};
+
 User.defaultProps = {
     listDocType: [{ label: 'Bilhete de Identidade', value: 'BI' },
     { label: 'Cartão Nacional de Identificação', value: 'CNI' },

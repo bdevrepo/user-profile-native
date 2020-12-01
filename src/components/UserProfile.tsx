@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, Button, Image, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import {CUSTOMON} from './../store/constants';
+import GlobalStyles from './../assets/style/GlobalStyles';
 const Separator = () => (
     <View style={styles.separator} />
 );
@@ -33,10 +34,12 @@ const UserProfile = ({onPressFunction,accountPage,logoutPage,userDetail}:GridPro
                 />
                 <Text style={{ fontSize: 20, fontWeight: "bold" }}>{userDetail.name}</Text>
                 <Text style={{ marginBottom: 15 }}>{userDetail.email}</Text>
-                <View style={styles.container}>
+                <View style={GlobalStyles.viewButton}>
                     <Button
                         onPress={() => {onPressGoToPage(accountPage)}}
-                        title="Gerir conta" />
+                        title="Gerir conta" 
+                        color={CUSTOMON.COLOR}
+                        />
                 </View>
             </View>
             {/***List App wich user can use */}
@@ -52,10 +55,11 @@ const UserProfile = ({onPressFunction,accountPage,logoutPage,userDetail}:GridPro
                 ))*/
             }
             <Separator />
-            <View style={styles.container}>
+            <View style={GlobalStyles.viewButton}>
                 <Button
                     onPress={() => {onPressGoToPage(logoutPage)}}
                     title="Sair"
+                    color={CUSTOMON.COLOR}
                 />
             </View>
         </View>
@@ -64,13 +68,9 @@ const UserProfile = ({onPressFunction,accountPage,logoutPage,userDetail}:GridPro
 
 const styles = StyleSheet.create({
     container: {
-        //borderWidth: 2,
-        flex: 1,
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 10,
-        //padding: 20
-
     },
     avatar: {
         width: 150,

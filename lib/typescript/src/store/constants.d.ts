@@ -3,3 +3,6 @@ export declare const PAGES: {
     INFORMACOES_PESSOAL: string;
 };
 export declare const COMPONENTS: {};
+export declare const CUSTOMON: {
+    COLOR: string;
+};

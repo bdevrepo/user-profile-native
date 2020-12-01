@@ -5,4 +5,5 @@ import NavProfile from './components/NavProfile';
 import AccountDashboard from './pages/AccountDashboard';
 import PagInicial from './components/PagInicial';
 import InfPessoal from './components/InfPessoal';
-export { User, UserGridMenu, UserProfile, NavProfile, AccountDashboard, PagInicial, InfPessoal };
+import LoginScreem from './components/LoginScreen';
+export { User, UserGridMenu, UserProfile, NavProfile, AccountDashboard, PagInicial, InfPessoal, LoginScreem };

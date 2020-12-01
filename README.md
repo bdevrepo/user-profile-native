@@ -64,6 +64,36 @@ const userDetail= {
     }
 <UserProfile userDetail={userDetail}/>
 
+/**
+ * Props
+ * 
+ * userNameLabel: string,
+  passwordLabel: string,
+  handleUsernaChange:Function,
+  handlePasswordChange:Function,
+  loginButtonTitle:string,
+  handleLoginButton:Function,
+  createAccountLabel:string,
+  handleCreateAccountButton:Function,
+  forgotPasswordLabel:string,
+  handleForgotPassword:Function
+ * **/
+<LoginScreen />
+
+/**
+ * Props
+ * userNameLabel,
+  passwordLabel,
+  handleUsernaChange,
+  handlePasswordChange,
+  createAccountLabel,
+  handleCreateAccountButton,
+  alreadyHasAccountLabel,
+  alreadyHasAccount
+ * ***/
+<SignupScreen />
+
+
 // Exemplo de Rotas a criar
 
 <Stack.Navigator>

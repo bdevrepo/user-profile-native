@@ -5,6 +5,9 @@ import NavProfile from './components/NavProfile';
 import AccountDashboard from './pages/AccountDashboard';
 import PagInicial from './components/PagInicial';
 import InfPessoal from './components/InfPessoal';
+import LoginScreem from './components/LoginScreen';
+import SignupScreen from './components/SignupScreen';
+import LogoWallet from './components/LogoWallet';
 
 export {
     User,
@@ -13,5 +16,8 @@ export {
     NavProfile,
     AccountDashboard,
     PagInicial,
-    InfPessoal
+    InfPessoal,
+    LoginScreem,
+    SignupScreen,
+    LogoWallet
 }
