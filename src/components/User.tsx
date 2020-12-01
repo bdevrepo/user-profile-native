@@ -5,7 +5,8 @@ import {
     Picker,
     CheckBox
 } from 'react-native';
-import { FloatingLabelInput, setGlobalStyles } from 'react-native-floating-label-input';
+//import { FloatingLabelInput, setGlobalStyles } from 'react-native-floating-label-input';
+import FloatingLabelInput from './FloatingLabelInput';
 import GlobalStyles from './../assets/style/GlobalStyles';
 var idetReqData = {};
 
@@ -24,7 +25,6 @@ const User = (props: any) => {
     const [checkedEditor, setCheckedEditor] = useState(false);
     const [checkedTitular, setCheckedTitular] = useState(false);
     const [checkedRepre, setCheckedRepre] = useState(false);
-
 
     useEffect(() => {
         const user = {
@@ -73,10 +73,12 @@ const User = (props: any) => {
         /> */}
 
             <FloatingLabelInput
-                label='Nome do requerente'
-                onChangeText={text => {
-                    setNameReq(text)
+                value={nameReq}
+                title='Nome do requerente'
+                onChangeText={(text: any) => {
+                    setNameReq(text);
                     props.parentUser(idetReqData);
+                    console.log('nameReq: ', nameReq)
                 }}
             />
             <Text style={GlobalStyles.baseText}>Documento identificação</Text>
@@ -95,28 +97,34 @@ const User = (props: any) => {
             </Picker>
 
             <FloatingLabelInput
-                label="E-mail"
-                onChangeText={text => { setEmailReq(text); props.parentUser(idetReqData); }}
+                value={emailReq}
+                title="E-mail"
+                onChangeText={(text: any) => { setEmailReq(text); props.parentUser(idetReqData); }}
             />
             <FloatingLabelInput
-                label="Telefone"
-                onChangeText={text => { setPhoneReq(text); props.parentUser(idetReqData); }}
+                value={phoneReq}
+                title="Telefone"
+                onChangeText={(text: any) => { setPhoneReq(text); props.parentUser(idetReqData); }}
             />
             <FloatingLabelInput
-                label="Telemóvel"
-                onChangeText={text => { setMobileReq(text); props.parentUser(idetReqData); }}
+                value={mobileReq}
+                title="Telemóvel"
+                onChangeText={(text: any) => { setMobileReq(text); props.parentUser(idetReqData); }}
             />
             <FloatingLabelInput
-                label="Morada"
-                onChangeText={text => { setAddressReq(text); props.parentUser(idetReqData); }}
+                value={addressReq}
+                title="Morada"
+                onChangeText={(text: any) => { setAddressReq(text); props.parentUser(idetReqData); }}
             />
             <FloatingLabelInput
-                label="Codigo Postal"
-                onChangeText={text => { setPostalCodeReq(text); props.parentUser(idetReqData); }}
+                value={postalCodeReq}
+                title="Codigo Postal"
+                onChangeText={(text: any) => { setPostalCodeReq(text); props.parentUser(idetReqData); }}
             />
             <FloatingLabelInput
-                label="Localidade"
-                onChangeText={text => { setPlaceReq(text); props.parentUser(idetReqData); }}
+                value={placeReq}
+                title="Localidade"
+                onChangeText={(text: any) => { setPlaceReq(text); props.parentUser(idetReqData); }}
             />
 
             <Text style={GlobalStyles.baseText}>Pais</Text>
@@ -168,13 +176,13 @@ const User = (props: any) => {
     );
 }
 
-setGlobalStyles.labelStyles = {
+/* setGlobalStyles.labelStyles = {
     color: 'black',
     fontSize:14,
     // any styles you want to generalize to your floating label
-};
+}; */
 
-setGlobalStyles.inputStyles = {
+/* setGlobalStyles.inputStyles = {
     // any styles you want to generalize to your input
     color: 'black',
     borderRadius: 5,
@@ -183,7 +191,7 @@ setGlobalStyles.inputStyles = {
     width: 350,
     padding: 4,
     fontSize: 14,
-};
+}; */
 
 User.defaultProps = {
     listDocType: [{ label: 'Bilhete de Identidade', value: 'BI' },

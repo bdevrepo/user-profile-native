@@ -26,7 +26,15 @@ export default StyleSheet.create({
         marginBottom:10
     },
     baseInput: {
+        borderWidth:0,
+        borderBottomWidth:1,
+        fontSize: 15,
+        fontFamily: 'Avenir-Medium',
+        color: 'black',
+        height:40 ,
         backgroundColor: "white",
+        padding:5
+        /* backgroundColor: "white",
         width: 350,
         height: 40,
         borderRadius: 5,
@@ -34,7 +42,7 @@ export default StyleSheet.create({
         // borderWidth: 0,
         // alignItems: "stretch",
         // borderBottomWidth: 1,
-        margin: 8,
+        margin: 8, */
     },
     checkboxLabel: {
         margin: 8,

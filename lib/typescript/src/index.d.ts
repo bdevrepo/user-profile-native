@@ -6,4 +6,6 @@ import AccountDashboard from './pages/AccountDashboard';
 import PagInicial from './components/PagInicial';
 import InfPessoal from './components/InfPessoal';
 import LoginScreem from './components/LoginScreen';
-export { User, UserGridMenu, UserProfile, NavProfile, AccountDashboard, PagInicial, InfPessoal, LoginScreem };
+import SignupScreen from './components/SignupScreen';
+import LogoWallet from './components/LogoWallet';
+export { User, UserGridMenu, UserProfile, NavProfile, AccountDashboard, PagInicial, InfPessoal, LoginScreem, SignupScreen, LogoWallet };

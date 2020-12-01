@@ -1,4 +1,4 @@
-/*import * as React from 'react';
+import * as React from 'react';
 import {
   NavProfile,
   AccountDashboard,
@@ -27,7 +27,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="App">
+      <Stack.Navigator initialRouteName="AccountDashboard">
         <Stack.Screen name="Login" component={SignupScreen} options={{ headerShown: false }} />
         <Stack.Screen name="App" component={Profile} options={{ headerShown: false }} />
         <Stack.Screen name="Logout" component={NavProfile} options={{ headerShown: false }} />
@@ -36,4 +36,4 @@ const App = () => {
     </NavigationContainer>
   );
 }
-export default App; */
+export default App; 

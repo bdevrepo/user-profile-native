@@ -1,10 +1,16 @@
 declare const _default: {
     container: {
-        flex: number;
+        alignSelf: "center";
+        alignItems: "stretch";
+        resizeMode: "cover";
+        backgroundColor: string;
     };
     baseText: {
         backgroundColor: string;
+        alignContent: "space-around";
         marginTop: number;
+        marginLeft: number;
+        fontSize: number;
     };
     titleText: {
         textAlign: "center";
@@ -12,12 +18,15 @@ declare const _default: {
         fontSize: number;
         fontWeight: "bold";
         marginTop: number;
+        marginBottom: number;
     };
     baseInput: {
         backgroundColor: string;
+        width: number;
         height: number;
-        borderWidth: number;
-        borderBottomWidth: number;
+        borderRadius: number;
+        fontSize: number;
+        margin: number;
     };
     checkboxLabel: {
         margin: number;
