@@ -21,12 +21,14 @@ declare const _default: {
         marginBottom: number;
     };
     baseInput: {
-        backgroundColor: string;
-        width: number;
-        height: number;
-        borderRadius: number;
+        borderWidth: number;
+        borderBottomWidth: number;
         fontSize: number;
-        margin: number;
+        fontFamily: string;
+        color: string;
+        height: number;
+        backgroundColor: string;
+        padding: number;
     };
     checkboxLabel: {
         margin: number;

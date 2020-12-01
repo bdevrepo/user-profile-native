@@ -7,9 +7,8 @@ import {
   Text,
   Button
 } from 'react-native';
-import GlobalStyles from './../assets/style/GlobalStyles';
-import { CUSTOMON } from './../store/constants';
-import { FloatingLabelInput, setGlobalStyles } from 'react-native-floating-label-input';
+import FloatingLabelInput from './FloatingLabelInput';
+import GlobalStyles from './../assets/style/GlobalStyles';import { CUSTOMON } from './../store/constants';
 
  type PropsType = {
   userNameLabel: string,
@@ -36,25 +35,26 @@ const LoginScreen = ({userNameLabel,
   handleForgotPassword}:PropsType) => {
  // const [username, setUsername] = useState('');
  // const [password, setPassword] = useState('');
-
+ const username = '';
+ const password = '';
   return (
       <ScrollView
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={styles.container}
       >
         <FloatingLabelInput
-          label={userNameLabel}
-         // value={username}
-          blurOnSubmit={false}
-          maxLength={100}
+          title={userNameLabel}
+          value={username}
+          //blurOnSubmit={false}
+          //maxLength={100}
           onChangeText={(value: any) => handleUsernaChange(value)}
         />
 
         <FloatingLabelInput
-          label={passwordLabel}
-          //value={password}
-          blurOnSubmit={false}
-          maxLength={100}
+          title={passwordLabel}
+          value={password}
+          //blurOnSubmit={false}
+          //maxLength={100}
           onChangeText={(value: any) => handlePasswordChange(value)}
         />
         <View style={[GlobalStyles.viewButton, { width: 350 }]}>
@@ -81,26 +81,6 @@ const LoginScreen = ({userNameLabel,
   );
 
 }
-
-/* setGlobalStyles.containerStyles = {
-  backgroundColor: '#eeddee',
-  // any styles you want to generalize to your input container
-}; */
-setGlobalStyles.labelStyles = {
-  color: 'black',
-  // any styles you want to generalize to your floating label
-};
-
-setGlobalStyles.inputStyles = {
-  // any styles you want to generalize to your input
-  color: 'black',
-  borderRadius: 5,
-  borderWidth: 1,
-  minHeight: 40,
-  margin: 8,
-  width: 350,
-  padding: 4
-};
 
 const styles = StyleSheet.create({
   container: {
