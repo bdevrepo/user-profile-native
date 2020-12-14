@@ -2,7 +2,8 @@ import * as React from 'react';
 import {
   NavProfile,
   AccountDashboard,
-  SignupScreen
+  SignupScreen,
+  LandingPage
 } from '@bdevrepo/user-profile-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -10,6 +11,11 @@ import { NavigationContainer } from '@react-navigation/native';
 function Profile() {
   return (
     <NavProfile accountPage='AccountDashboard' logoutPage='Logout' />
+  );
+}
+function LandingPageScreem() {
+  return (
+    <LandingPage />
   );
 }
 
@@ -27,12 +33,16 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="App">
+      <Stack.Navigator initialRouteName="LandingPage">
         <Stack.Screen name="Login" component={SignupScreen} options={{ headerShown: false }} />
         <Stack.Screen name="App" component={Profile} options={{ headerShown: false }} />
         <Stack.Screen name="Logout" component={NavProfile} options={{ headerShown: false }} />
         <Stack.Screen name="AccountDashboard" component={AccountDash} options={{ headerShown: false }} />
+        <Stack.Screen name="LandingPage" component={LandingPageScreem} options={{ headerShown: false }} />
+
       </Stack.Navigator>
+
+      
     </NavigationContainer>
   );
 }

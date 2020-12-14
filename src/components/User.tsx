@@ -78,7 +78,6 @@ const User = (props: any) => {
                 onChangeText={(text: any) => {
                     setNameReq(text);
                     props.parentUser(idetReqData);
-                    console.log('nameReq: ', nameReq)
                 }}
             />
             <Text style={GlobalStyles.baseText}>Documento identificação</Text>
