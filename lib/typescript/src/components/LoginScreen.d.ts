@@ -2,7 +2,7 @@
 declare type PropsType = {
     userNameLabel: string;
     passwordLabel: string;
-    handleUsernaChange: Function;
+    handleUsernameChange: Function;
     handlePasswordChange: Function;
     loginButtonTitle: string;
     handleLoginButton: Function;
@@ -12,7 +12,7 @@ declare type PropsType = {
     handleForgotPassword: Function;
 };
 declare const LoginScreen: {
-    ({ userNameLabel, passwordLabel, handleUsernaChange, handlePasswordChange, loginButtonTitle, handleLoginButton, createAccountLabel, handleCreateAccountButton, forgotPasswordLabel, handleForgotPassword }: PropsType): JSX.Element;
+    ({ userNameLabel, passwordLabel, handleUsernameChange, handlePasswordChange, loginButtonTitle, handleLoginButton, createAccountLabel, handleCreateAccountButton, forgotPasswordLabel, handleForgotPassword }: PropsType): JSX.Element;
     defaultProps: {
         userNameLabel: string;
         passwordLabel: string;
