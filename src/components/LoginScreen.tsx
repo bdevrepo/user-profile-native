@@ -13,7 +13,7 @@ import GlobalStyles from './../assets/style/GlobalStyles';import { CUSTOMON } fr
  type PropsType = {
   userNameLabel: string,
   passwordLabel: string,
-  handleUsernaChange:Function,
+  handleUsernameChange:Function,
   handlePasswordChange:Function,
   loginButtonTitle:string,
   handleLoginButton:Function,
@@ -25,7 +25,7 @@ import GlobalStyles from './../assets/style/GlobalStyles';import { CUSTOMON } fr
 
 const LoginScreen = ({userNameLabel,
   passwordLabel,
-  handleUsernaChange,
+  handleUsernameChange,
   handlePasswordChange,
   loginButtonTitle,
   handleLoginButton,
@@ -47,7 +47,7 @@ const LoginScreen = ({userNameLabel,
           value={username}
           //blurOnSubmit={false}
           //maxLength={100}
-          onChangeText={(value: any) => handleUsernaChange(value)}
+          onChangeText={(value: any) => handleUsernameChange(value)}
         />
 
         <FloatingLabelInput
