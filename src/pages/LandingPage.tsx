@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, Alert } from 'react-native';
-import Header from '../components/Header';
+import { View,  Alert } from 'react-native';
+//import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import ClientsSection from '../components/ClientsSection';
 import AboutUsSection from '../components/AboutUsSection';
@@ -16,9 +16,9 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
-const Home = () => {
+/*const Home = () => {
     return (<Text>Home!</Text>);
-}
+}*/
 //var menu: [{ name: 'Angelo', component: Home },];
 
 
@@ -49,11 +49,11 @@ const LandingPage = () => {
             {/* <Header menu={menu} /> */}
         </View>
         <View >
-             <HeroSection  /* title={heroSection.title}
+             <HeroSection   title={heroSection.title} //Comentar caso nao funcionar title ate imgsource
                 subtitle={heroSection.subtitle}
                 buttonTitle={heroSection.buttonTitle}
                 buttonPressFuncion={heroSection.buttonPressFuncion}
-                imgSource={heroSection.imgSource}  */
+                imgSource={heroSection.imgSource}  
             /> 
         </View>
         <View >
