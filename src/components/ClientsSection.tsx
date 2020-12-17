@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Image} from 'react-native';
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
@@ -10,7 +10,9 @@ const ClientsSection = (props: any) => {
 
     return (
         <View >
-            <Text>TODO ClientsSection </Text>
+        <View >
+            <Image source={{uri:'https://'}}/>
+        </View>
         </View>
     );
 }
