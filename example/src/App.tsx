@@ -4,7 +4,7 @@ import {
   AccountDashboard,
   SignupScreen,
   LandingPage
-} from '@bdevrepo/user-profile-native';
+} from 'user-profile-native'; //@bdevrepo
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
