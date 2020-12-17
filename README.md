@@ -1,6 +1,12 @@
 # user-profile-native
 
 user-profile-native
+## Contributing
+
+to install dependencies
+```sh
+yarn bootstrap
+```
 
 ## Installation
 

@@ -4,7 +4,9 @@ import {
   AccountDashboard,
   SignupScreen,
   LandingPage
-} from 'user-profile-native'; //@bdevrepo
+  // Deve ficar @bdevrepo/user-profile-native. É o mesmo 
+  // name do package.json
+} from '@bdevrepo/user-profile-native'; //@bdevrepo
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
