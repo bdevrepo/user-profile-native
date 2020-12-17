@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var idetReqData = {};
+var footerData = {};
+
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
@@ -9,24 +10,24 @@ var idetReqData = {};
 } */
 
 const Footer = (props: any) => {
-    const [nameReq, setNameReq] = useState("");
+    const [footer, setFooter] = useState("");
 
     useEffect(() => {
         const Footer = {
-            nameReq: '',
+            footer: '',
     }
 
-    Footer["nameReq"] = nameReq;
+    Footer["footer"] = footer;
     });
     return (
         <View >
             <Text>TODO Footer </Text>
             <FloatingLabelInput
-                value={nameReq}
-                title='Nome do requerente'
+                value={footer}
+                title='Footer'
                 onChangeText={(text: any) => {
-                    setNameReq(text);
-                    props.parentUser(idetReqData);
+                    setFooter(text);
+                    props.parentUser(footerData);
                 }}
             />
         </View>

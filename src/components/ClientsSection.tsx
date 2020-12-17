@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var idetReqData = {};
+var clienteSecData = {}; 
 
 
 /* type HeaderProps = {
@@ -11,25 +11,25 @@ var idetReqData = {};
 
 
 const ClientsSection = (props: any) => {
-    const [nameReq, setNameReq] = useState("");
+    const [clienteSec, setClienteSec] = useState("");
 
     useEffect(() => {
         const ClientsSection = {
-            nameReq: '',
+            clienteSec: '',
     }
 
-    ClientsSection["nameReq"] = nameReq;
+    ClientsSection["clienteSec"] = clienteSec;
     });
 
     return (
         <View >
             <Text>TODO ClientsSection </Text>
             <FloatingLabelInput
-                value={nameReq}
-                title='Nome do requerente'
+                value={clienteSec}
+                title='ClienteSection'
                 onChangeText={(text: any) => {
-                    setNameReq(text);
-                    props.parentUser(idetReqData);
+                    setClienteSec(text);
+                    props.parentUser(clienteSecData);
                 }}
             />
         </View>

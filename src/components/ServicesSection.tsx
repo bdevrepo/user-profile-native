@@ -1,22 +1,23 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var idetReqData = {};
+var servSectionData = {};
+
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
     ]
 } */
 
-const ServicesSection = (props: any) => {
-    const [nameReq, setNameReq] = useState("");
+const ServicesSection = (props: any) => { 
+    const [servSection, setservSection] = useState("");
 
     useEffect(() => {
         const ServicesSection = {
-            nameReq: '',
+            servSection: '',
     }
 
-    ServicesSection["nameReq"] = nameReq;
+    ServicesSection["servSection"] = servSection;
     });
 
 
@@ -24,11 +25,11 @@ const ServicesSection = (props: any) => {
         <View >
             <Text>TODO ServicesSection </Text>
             <FloatingLabelInput
-                value={nameReq}
-                title='Nome do requerente'
+                value={servSection}
+                title='ServicesSection'
                 onChangeText={(text: any) => {
-                    setNameReq(text);
-                    props.parentUser(idetReqData);
+                    setservSection(text);
+                    props.parentUser(servSectionData);
                 }}
             />
         </View>

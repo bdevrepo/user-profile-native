@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var idetReqData = {};
+var countsSectionData = {};
+
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
@@ -9,14 +10,14 @@ var idetReqData = {};
 } */
 
 const CountsSection = (props: any) => {
-    const [nameReq, setNameReq] = useState("");
+    const [countsSection, setCountsSection] = useState("");
 
     useEffect(() => {
         const CountsSection = {
-            nameReq: '',
+            countsSection: '',
     }
 
-    CountsSection["nameReq"] = nameReq;
+    CountsSection["countsSection"] = countsSection;
     });
 
 
@@ -24,11 +25,11 @@ const CountsSection = (props: any) => {
         <View >
             <Text>TODO CountsSection </Text>
             <FloatingLabelInput
-                value={nameReq}
-                title='Nome do requerente'
+                value={countsSection}
+                title='CountSection'
                 onChangeText={(text: any) => {
-                    setNameReq(text);
-                    props.parentUser(idetReqData);
+                    setCountsSection(text);
+                    props.parentUser(countsSectionData);
                 }}
             />
         </View>

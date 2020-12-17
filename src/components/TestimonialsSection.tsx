@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var idetReqData = {};
+var testiSectionData = {};
+
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
@@ -9,25 +10,25 @@ var idetReqData = {};
 } */
     
 const TestimonialsSection = (props: any) => {
-    const [nameReq, setNameReq] = useState("");
+    const [testiSection, settestiSection] = useState("");
 
     useEffect(() => {
         const TestimonialsSection = {
-            nameReq: '',
+            testiSection: '',
     }
 
-    TestimonialsSection["nameReq"] = nameReq;
+    TestimonialsSection["testiSection"] = testiSection;
     });
 
     return (
         <View >
             <Text>TODO TestimonialsSection </Text>
             <FloatingLabelInput
-                value={nameReq}
-                title='Nome do requerente'
+                value={testiSection}
+                title='Testimonial Section'
                 onChangeText={(text: any) => {
-                    setNameReq(text);
-                    props.parentUser(idetReqData);
+                    settestiSection(text);
+                    props.parentUser(testiSectionData);
                 }}
             />
         </View>
