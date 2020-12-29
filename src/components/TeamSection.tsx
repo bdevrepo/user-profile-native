@@ -1,32 +1,32 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var idetReqData = {};
+var teamSecData = {}; 
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
     ]
 } */
 const TeamSection = (props: any) => {
-    const [nameReq, setNameReq] = useState("");
+    const [teamSec, setTeamSec] = useState("");
 
     useEffect(() => {
         const TeamSection = {
-            nameReq: '',
+            teamSec: '',
     }
 
-    TeamSection["nameReq"] = nameReq;
+    TeamSection["teamSec"] = teamSec;
     });
 
     return (
         <View >
             <Text>TODO TeamSection </Text>
             <FloatingLabelInput
-                value={nameReq}
-                title='Nome do requerente'
+                value={teamSec}
+                title='Team Section'
                 onChangeText={(text: any) => {
-                    setNameReq(text);
-                    props.parentUser(idetReqData);
+                    setTeamSec(text);
+                    props.parentUser(teamSecData);
                 }}
             />
         </View>

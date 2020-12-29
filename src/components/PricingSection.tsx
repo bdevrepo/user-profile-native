@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var idetReqData = {};
+var pricingSecData = {};
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
@@ -9,25 +9,25 @@ var idetReqData = {};
 } */
 
 const PricingSection = (props: any) => {
-    const [nameReq, setNameReq] = useState("");
+    const [pricingSeq, setPricingSeq] = useState("");
 
     useEffect(() => {
         const PricingSection = {
-            nameReq: '',
+            pricingSeq: '',
     }
 
-    PricingSection["nameReq"] = nameReq;
+    PricingSection["pricingSeq"] = pricingSeq;
     });
 
     return (
         <View >
             <Text>TODO PricingSection </Text>
             <FloatingLabelInput
-                value={nameReq}
-                title='Nome do requerente'
+                value={pricingSeq}
+                title=' Pricing Section'
                 onChangeText={(text: any) => {
-                    setNameReq(text);
-                    props.parentUser(idetReqData);
+                    setPricingSeq(text);
+                    props.parentUser(pricingSecData);
                 }}
             />
         </View>

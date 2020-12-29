@@ -1,32 +1,34 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var idetReqData = {};
+var clienteSecData = {};
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
     ]
 } */
 const PortfolioSection = (props: any) => {
-    const [nameReq, setNameReq] = useState("");
+    const [portfSec, setPortofSect] = useState("");
+
+    
 
     useEffect(() => {
         const PortfolioSection = {
-            nameReq: '',
+            portfSec: '',
     }
 
-    PortfolioSection["nameReq"] = nameReq;
+    PortfolioSection["portfSec"] = portfSec;
     });
 
     return (
         <View >
             <Text>TODO PortfolioSection </Text>
             <FloatingLabelInput
-                value={nameReq}
-                title='Nome do requerente'
+                value={portfSec}
+                title='Portofolio Section'
                 onChangeText={(text: any) => {
-                    setNameReq(text);
-                    props.parentUser(idetReqData);
+                    setPortofSect(text);
+                    props.parentUser(clienteSecData);
                 }}
             />
         </View>
