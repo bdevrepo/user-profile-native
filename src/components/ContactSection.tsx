@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, } from 'react-native';
-import { ListItem, Icon, Input, Button } from 'react-native-elements';
-import FloatingLabelInput from './FloatingLabelInput';
-var contactSectionData = {};
+import {  Input, Button } from 'react-native-elements';
+//import FloatingLabelInput from './FloatingLabelInput';
+//var contactSectionData = {};
 
 
 
@@ -18,7 +18,7 @@ const ContactSection = (props: any) => {
             contactSection: '',
         }
 
-        ContactSection["ContactSection"] = ContactSection;
+        //ContactSection["ContactSection"] = ContactSection;
     });
 
 
@@ -40,7 +40,7 @@ const ContactSection = (props: any) => {
                 placeholderTextColor="grey"
                 numberOfLines={1}
                 multiline={true}
-                onChangeText={text => setName(text)}
+                onChangeText={text => setName(null)}
             />
             <Input
                 ///  style={styles.textArea}
@@ -49,7 +49,7 @@ const ContactSection = (props: any) => {
                 placeholderTextColor="grey"
                 numberOfLines={1}
                 multiline={true}
-                onChangeText={text => setEmail(text)}
+                onChangeText={text => setEmail(null)}
             />
             <Input
                 ///  style={styles.textArea}
@@ -58,7 +58,7 @@ const ContactSection = (props: any) => {
                 placeholderTextColor="grey"
                 numberOfLines={1}
                 multiline={true}
-                onChangeText={text => setSubjet(text)}
+                onChangeText={text => setSubjet(null)}
             />
             <Input
                 ///  style={styles.textArea}
@@ -67,7 +67,7 @@ const ContactSection = (props: any) => {
                 placeholderTextColor="grey"
                 numberOfLines={1}
                 multiline={true}
-                onChangeText={text => setMessage(text)}
+                onChangeText={text => setMessage(null)}
             />
             <Text >Loading</Text>
             <Text >Your message has been sent. Thank you!</Text>
