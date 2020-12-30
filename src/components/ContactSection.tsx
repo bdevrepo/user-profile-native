@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
-import { ListItem, Icon, Input } from 'react-native-elements';
+import { View, Text, } from 'react-native';
+import { ListItem, Icon, Input, Button } from 'react-native-elements';
 import FloatingLabelInput from './FloatingLabelInput';
 var contactSectionData = {};
 
@@ -71,8 +71,11 @@ const ContactSection = (props: any) => {
             />
             <Text >Loading</Text>
             <Text >Your message has been sent. Thank you!</Text>
-
-
+            <view>
+                <Button
+                    title="Send Message"
+                    onPress={() => null}>Gravar</Button>
+            </view>
         </View>
     );
 }
