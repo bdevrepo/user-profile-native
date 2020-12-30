@@ -7,6 +7,7 @@ export const COMPONENTS = {
 };
 
 export const CUSTOMON = {
+  // Button Color
   COLOR:'#79a5f2'
 };
 

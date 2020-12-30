@@ -30,7 +30,8 @@ export default StyleSheet.create({
         borderBottomWidth:1,
         fontSize: 15,
         fontFamily: 'Avenir-Medium',
-        color: 'black',
+        //color: 'black',
+        color: '#444444',
         height:40 ,
         backgroundColor: "white",
         padding:5

@@ -1,6 +1,6 @@
 import React from 'react';
-import { View,  Alert } from 'react-native';
-//import Header from '../components/Header';
+import { View,  Alert,Text } from 'react-native';
+import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import ClientsSection from '../components/ClientsSection';
 import AboutUsSection from '../components/AboutUsSection';
@@ -16,17 +16,12 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 
-/*const Home = () => {
+// Default component
+const Home = () => {
     return (<Text>Home!</Text>);
-}*/
-//var menu: [{ name: 'Angelo', component: Home },];
+}
 
-
-const LandingPage = () => {
-
-    //  Header
-    //menu[0].name = 'Angelo';
-    //menu[0].component = Home;
+const LandingPage = (props:any) => {
 
     // HeroSection
      const heroSection = {
@@ -45,8 +40,8 @@ const LandingPage = () => {
         props.parentDash(allData);
     } */
     return (<View >
-        <View >
-            {/* <Header menu={menu} /> */}
+        <View style={{marginBottom:40}}>
+             <Header menu={props.menu} /> 
         </View>
         <View >
              <HeroSection   title={heroSection.title} //Comentar caso nao funcionar title ate imgsource
