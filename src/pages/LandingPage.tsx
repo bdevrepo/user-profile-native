@@ -15,6 +15,7 @@ import PricingSection from '../components/PricingSection';
 import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
+import {CUSTOMON} from './../store/constants';
 
 // Default component
 const Home = () => {
@@ -29,7 +30,7 @@ const LandingPage = (props:any) => {
         subtitle: 'We are team of talanted',
         buttonTitle: 'Get Started',
         buttonPressFuncion: function () { () => Alert },
-        imgSource: '../assets/img/BWalletH.svg'
+        imgSource: CUSTOMON.IMAGE_SERVER +'image/hero-img.png',
     } 
 
     /* const callBackUser =(data:any) => {
@@ -39,7 +40,7 @@ const LandingPage = (props:any) => {
     /* const submitHandler =() => {
         props.parentDash(allData);
     } */
-    return (<View >
+    return (<View style={{backgroundColor:'white'}}>
         <View style={{marginBottom:40}}>
              <Header menu={props.menu} /> 
         </View>
