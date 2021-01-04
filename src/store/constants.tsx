@@ -8,6 +8,7 @@ export const COMPONENTS = {
 
 export const CUSTOMON = {
   // Button Color
-  COLOR:'#79a5f2'
+  COLOR:'#79a5f2',
+  IMAGE_SERVER:'https://localhost:3443/'
 };
 
