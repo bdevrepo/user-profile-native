@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
-var clienteSecData = {}; 
+var clienteSecData = {};
 
 
 /* type HeaderProps = {
@@ -9,6 +9,7 @@ var clienteSecData = {};
     ]
 } */
 
+const clientimage1 = '/Cliente.png;base64';
 
 const ClientsSection = (props: any) => {
     const [clienteSec, setClienteSec] = useState("");
@@ -16,28 +17,38 @@ const ClientsSection = (props: any) => {
     useEffect(() => {
         const ClientsSection = {
             clienteSec: '',
-    }
+        }
 
-    ClientsSection["clienteSec"] = clienteSec;
+        ClientsSection["clienteSec"] = clienteSec;
     });
 
     return (
         <View >
-            <Text>TODO ClientsSection </Text>
-            <FloatingLabelInput
+                        <Text>TODO ClientsSection </Text>
+
+            <Image source={{ uri: clientimage1 }} style={styles.image} />
+
+         {/*   <FloatingLabelInput
                 value={clienteSec}
                 title='ClienteSection'
                 onChangeText={(text: any) => {
                     setClienteSec(text);
                     props.parentUser(clienteSecData);
                 }}
-            />
+            />*/}
         </View>
     );
 }
+const styles = StyleSheet.create({
 
-/* Header.defaultProps = {
-    menu: [{ name: 'Angola', component: Home() },
-    ]
-} */
+    image: {
+        width: 20,
+        height: 15,
+        justifyContent: 'center',
+    },
+    /* Header.defaultProps = {
+        menu: [{ name: 'Angola', component: Home() },
+        ]
+    } */
+});
 export default ClientsSection;
