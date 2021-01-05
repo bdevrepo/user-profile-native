@@ -23,7 +23,6 @@ const ServicesSection = (props: any) => {
 
     return (
         <View >
-            <Text>TODO ServicesSection </Text>
             <h2>Services</h2>
             <Text>Magnam dolores commodi suscipit eius consequatur ex aliquid fug</Text>
             <h4>Lorem Ipsum</h4>

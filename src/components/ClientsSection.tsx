@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
 import FloatingLabelInput from './FloatingLabelInput';
 import { CUSTOMON } from './../store/constants';
 
 //var clienteSecData = {};
-
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
@@ -24,7 +23,8 @@ const ClientsSection = (props: any) => {
         ClientsSection["clienteSec"] = clienteSec;
     });*/
 
-    const path = require('path');
+    
+const path = require('path');
 type ClientsSection = {
     imgSource1: string,
     imgSource2: string,
@@ -32,24 +32,60 @@ type ClientsSection = {
 
 }
 
-const ClientsSection = ({ 
-    imgSource1 ,imgSource2,imgSource3}: ClientsSection) => {
-        console.log('imgSource: ', imgSource1);
+const ClientsSection = ({
+    imgSource1, imgSource2, imgSource3 }: ClientsSection) => {
+    console.log('imgSource: ', imgSource1);
 
+    const listData = [
+        {
+            id: 1,
+            imgSource1
+        },
+        {
+            id:2,
+            imgSource2
+        },
+        {
+            id: 3,
+            imgSource3,
+            
+        },
+    ];
+
+    /*const myData = [
+        { id: 1,
+         }, 
+        { id: 2 }
+    ]`*/
+
+    
+
+    const renderItem = () => { return  <Image style={styles.image} source={{ uri: imgSource1}} />}
+    
     return (
-        <View >
-            <Text>TODO ClientsSection </Text>
-            <Image style={styles.image} source={{ uri: imgSource1 }} />
-            <Image style={styles.image} source={{ uri: imgSource2 }} />
-            <Image style={styles.image} source={{ uri: imgSource3}} />
+        /*  <View >
+              <Text>TODO ClientsSection </Text>
+              <Image style={styles.image} source={{ uri:imgSource2  }} />
+              <Image style={styles.image} source={{ uri: imgSource2 }} />
+              <Image style={styles.image} source={{ uri: imgSource3}} />
+  
+              {/*<Image source={{ uri: clientimage1 }} style={styles.image} />
+      </View>*/
 
-            {/*<Image source={{ uri: clientimage1 }} style={styles.image} />*/}
-        </View>
+        <FlatList
+        horizontal
+            data={listData}
+            numColumns={1} 
+            renderItem={renderItem}
+
+        />
     );
 }
 const styles = StyleSheet.create({
 
     image: {
+        paddingHorizontal:30,
+        marginHorizontal: 20,
         width: 200,
         height: 200,
         justifyContent: 'center',
