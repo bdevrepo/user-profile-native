@@ -23,12 +23,12 @@ const ClientsSection = (props: any) => {
         ClientsSection["clienteSec"] = clienteSec;
     });*/
 
-    
+
 const path = require('path');
 type ClientsSection = {
     imgSource1: string,
     imgSource2: string,
-    imgSource3: string
+    imgSource3: string,
 
 }
 
@@ -42,13 +42,13 @@ const ClientsSection = ({
             imgSource1
         },
         {
-            id:2,
+            id: 2,
             imgSource2
         },
         {
             id: 3,
             imgSource3,
-            
+
         },
     ];
 
@@ -56,44 +56,40 @@ const ClientsSection = ({
         { id: 1,
          }, 
         { id: 2 }
-    ]`*/
+    ]*/
 
-    
+    const renderItem = ({ item }) => {
+        // console.log('item',item);   <Image style={styles.image} source={{ uri: item.imgSource1}} />}
+        return (
+            <View style={styles.rowContainer} >
+                <Image style={styles.image} source={{ uri: item.imgSource1 }} />
+                <Image style={styles.image} source={{ uri: item.imgSource2 }} />
+                <Image style={styles.image} source={{ uri: item.imgSource3 }} />
+            </View >)
+    };
 
-    const renderItem = () => { return  <Image style={styles.image} source={{ uri: imgSource1}} />}
-    
     return (
-        /*  <View >
-              <Text>TODO ClientsSection </Text>
-              <Image style={styles.image} source={{ uri:imgSource2  }} />
-              <Image style={styles.image} source={{ uri: imgSource2 }} />
-              <Image style={styles.image} source={{ uri: imgSource3}} />
-  
-              {/*<Image source={{ uri: clientimage1 }} style={styles.image} />
-      </View>*/
 
         <FlatList
-        horizontal
             data={listData}
-            numColumns={1} 
+            numColumns={3}
             renderItem={renderItem}
-
+            keyExtractor={item => item.id}
         />
     );
 }
 const styles = StyleSheet.create({
 
     image: {
-        paddingHorizontal:30,
-        marginHorizontal: 20,
-        width: 200,
-        height: 200,
-        justifyContent: 'center',
+        width: 100,
+        height: 100,
+        flexDirection: "row",
+        marginHorizontal:-10,
     },
-    /* Header.defaultProps = {
-        menu: [{ name: 'Angola', component: Home() },
-        ]
-    } */
+    rowContainer: {
+        flexDirection: "row",
+
+    }
 });
 
 ClientsSection.defaultProps = {
