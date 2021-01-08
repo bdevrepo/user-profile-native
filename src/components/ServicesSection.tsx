@@ -33,7 +33,9 @@ const ServicesSection = (props: any) => {
             <Text>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia </Text>
             <h4>Nemo Enim</h4>
             <Text>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis </Text>
+            
         </View>
+        
     );
 }
 
