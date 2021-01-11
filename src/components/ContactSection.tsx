@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, } from 'react-native';
-import {  Input, Button } from 'react-native-elements';
+import React, { useEffect } from 'react';
+import { View, Text,  Button } from 'react-native';
 //import FloatingLabelInput from './FloatingLabelInput';
 //var contactSectionData = {};
 
 
 
-const ContactSection = (props: any) => {
-    const [name, setName] = useState(null);
-    const [email, setEmail] = useState(null);
-    const [subjet, setSubjet] = useState(null);
-    const [message, setMessage] = useState(null);
+const ContactSection = () => {
+    //const [name, setName] = useState(null);
+    //const [email, setEmail] = useState(null);
+    //const [subjet, setSubjet] = useState(null);
+    //const [message, setMessage] = useState(null);
 
 
     useEffect(() => {
-        const ContactSection = {
+        /* const ContactSection = {
             contactSection: '',
-        }
+        } */
 
         //ContactSection["ContactSection"] = ContactSection;
     });
@@ -32,8 +31,8 @@ const ContactSection = (props: any) => {
             <Text >New York, NY 535022</Text>
             <Text >info@example.com</Text>
             <Text >+1 5589 55488 55s</Text>
-
-            <Input
+            {/*** Usar FloatingLabelInput */}
+            {/* <Input
                 ///  style={styles.textArea}
                 underlineColorAndroid="transparent"
                 placeholder="Your Name"
@@ -41,8 +40,8 @@ const ContactSection = (props: any) => {
                 numberOfLines={1}
                 multiline={true}
                 onChangeText={text => setName(null)}
-            />
-            <Input
+            /> */}
+            {/* <Input
                 ///  style={styles.textArea}
                 underlineColorAndroid="transparent"
                 placeholder="Your Email"
@@ -50,8 +49,8 @@ const ContactSection = (props: any) => {
                 numberOfLines={1}
                 multiline={true}
                 onChangeText={text => setEmail(null)}
-            />
-            <Input
+            /> */}
+            {/* <Input
                 ///  style={styles.textArea}
                 underlineColorAndroid="transparent"
                 placeholder="Subject"
@@ -59,8 +58,8 @@ const ContactSection = (props: any) => {
                 numberOfLines={1}
                 multiline={true}
                 onChangeText={text => setSubjet(null)}
-            />
-            <Input
+            /> */}
+            {/* <Input
                 ///  style={styles.textArea}
                 underlineColorAndroid="transparent"
                 placeholder="Message"
@@ -68,7 +67,7 @@ const ContactSection = (props: any) => {
                 numberOfLines={1}
                 multiline={true}
                 onChangeText={text => setMessage(null)}
-            />
+            /> */}
             <Text >Loading</Text>
             <Text >Your message has been sent. Thank you!</Text>
             <view>

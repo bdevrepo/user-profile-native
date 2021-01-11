@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text } from 'react-native';
+//import { Text } from 'react-native';
 import {
   NavProfile,
   AccountDashboard,
@@ -10,7 +10,7 @@ import {
 } from '@bdevrepo/user-profile-native'; //@bdevrepo
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+//import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 function Profile() {
   return (
@@ -18,12 +18,12 @@ function Profile() {
   );
 }
 function LandingPageScreem() {
-  const Stack = createStackNavigator();
-  const Tab = createBottomTabNavigator();
+  //const Stack = createStackNavigator();
+  //const Tab = createBottomTabNavigator();
 
-  const Home = () => {
+  /* const Home = () => {
     return (<Text>Home!</Text>);
-  }
+  } */
   //Dummy content to show
 //You can also use dynamic data by calling webservice
 const CONTENT = [

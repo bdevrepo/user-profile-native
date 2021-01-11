@@ -7,7 +7,6 @@ import { View,
     Alert } from 'react-native';
 import {CUSTOMON} from './../store/constants';
 
-const path = require('path');
 type HeroSectionProps = {
     title: string,
     subtitle: string,

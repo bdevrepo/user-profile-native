@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,  Alert,Text } from 'react-native';
+import { View,  Alert } from 'react-native';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
 import ClientsSection from '../components/ClientsSection';
@@ -18,9 +18,9 @@ import Footer from '../components/Footer';
 import {CUSTOMON} from './../store/constants';
 
 // Default component
-const Home = () => {
+/* const Home = () => {
     return (<Text>Home!</Text>);
-}
+} */
 
 const LandingPage = (props:any) => {
 

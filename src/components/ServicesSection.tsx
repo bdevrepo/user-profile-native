@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import {View, Text} from 'react-native';
-import FloatingLabelInput from './FloatingLabelInput';
-var servSectionData = {};
+//import FloatingLabelInput from './FloatingLabelInput';
+//var servSectionData = {};
 
 
 /* type HeaderProps = {
@@ -9,8 +9,8 @@ var servSectionData = {};
     ]
 } */
 
-const ServicesSection = (props: any) => { 
-    const [servSection, setservSection] = useState("");
+const ServicesSection = () => { 
+    const servSection=''; // [servSection, setservSection] = useState("");
 
     useEffect(() => {
         const ServicesSection = {

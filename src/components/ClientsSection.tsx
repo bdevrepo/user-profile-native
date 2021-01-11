@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
-import FloatingLabelInput from './FloatingLabelInput';
+import React from 'react';
+import {  StyleSheet, Image, FlatList } from 'react-native';
 import { CUSTOMON } from './../store/constants';
 
 //var clienteSecData = {};
@@ -23,8 +22,8 @@ const ClientsSection = (props: any) => {
         ClientsSection["clienteSec"] = clienteSec;
     });*/
 
-
-const path = require('path');
+    
+//const path = require('path');
 type ClientsSection = {
     imgSource1: string,
     imgSource2: string,
