@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
-import FloatingLabelInput from './FloatingLabelInput';
-var faqSectionData = {};
+import React, { useEffect } from 'react';
+import { View } from 'react-native';
+//import FloatingLabelInput from './FloatingLabelInput';
+//var faqSectionData = {};
 
 
 
@@ -10,8 +10,8 @@ var faqSectionData = {};
     ]
 } */
 
-const FAQSection = (props: any) => {
-    const [faqSection, setFaqSection] = useState("");
+const FAQSection = () => {
+    const faqSection =''; //[faqSection, setFaqSection] = useState("");
 
     useEffect(() => {
         const FAQSection = {

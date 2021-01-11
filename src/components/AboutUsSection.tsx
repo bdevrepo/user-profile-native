@@ -1,9 +1,9 @@
-import { Link } from '@react-navigation/native';
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import FloatingLabelInput from './FloatingLabelInput';
+//import { Link } from '@react-navigation/native';
+import React, {  useEffect } from 'react';
+import { View, Text } from 'react-native';
+//import FloatingLabelInput from './FloatingLabelInput';
 
-var aboutUsData = {};
+//var aboutUsData = {};
 
 
 /* type AboutUsSectionprops = {
@@ -11,8 +11,8 @@ var aboutUsData = {};
     ]
 } */
 
-const AboutUsSection = (props: any) => {
-  const [aboutUs, setAboutUs] = useState("");
+const AboutUsSection = () => {
+  const aboutUs=''; //[aboutUs, setAboutUs] = useState("");
 
   useEffect(() => {
     const AboutUsSection = {
@@ -43,7 +43,7 @@ const AboutUsSection = (props: any) => {
     </View >
   );
 };
-const styles = StyleSheet.create({
+/* const styles = StyleSheet.create({
 
   h1: {
     color: '#000000',
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     width: '50%' // is 50% of container width
   }
 
-});
+}); */
 
 /* AboutUsSection.defaultProps = {
     menu: [{ name: 'Angola', component: Home() },

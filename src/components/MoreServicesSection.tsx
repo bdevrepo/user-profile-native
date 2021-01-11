@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import {View, Text} from 'react-native';
-import FloatingLabelInput from './FloatingLabelInput';
-var moreServsecData = {};
+//import FloatingLabelInput from './FloatingLabelInput';
+//var moreServsecData = {};
 
 /* type HeaderProps = {
     menu: [{ name: String, component: Function},
     ]
 } */
 
-const MoreServicesSection = (props: any) => {
-    const [moreServ, setMoreServ] = useState(""); 
+const MoreServicesSection = () => {
+    const moreServ=''; //[moreServ, setMoreServ] = useState(""); 
 
     useEffect(() => {
         const MoreServicesSection = {
