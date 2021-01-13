@@ -1,5 +1,5 @@
 import React from 'react';
-import {  StyleSheet, Image, FlatList } from 'react-native';
+import { View, StyleSheet, Image, FlatList } from 'react-native';
 import { CUSTOMON } from './../store/constants';
 
 //var clienteSecData = {};

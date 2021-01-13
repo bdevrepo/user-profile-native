@@ -1,41 +1,68 @@
-import React, {useState, useEffect} from 'react';
-import {View, Text} from 'react-native';
-import FloatingLabelInput from './FloatingLabelInput';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet, TouchableHighlight, FlatList } from 'react-native';
 var footerData = {};
 
 
-/* type HeaderProps = {
-    menu: [{ name: String, component: Function},
-    ]
-} */
+type Footer = {
+    onPressFunction: Function
+    listMenu: [{ id: 0, name: '' }]
+}
+const Footer = ({ listMenu }: Footer) => {
 
-const Footer = (props: any) => {
-    const [footer, setFooter] = useState("");
-
-    useEffect(() => {
-        const Footer = {
-            footer: '',
-    }
-
-    Footer["footer"] = footer;
-    });
     return (
         <View >
-            <Text>TODO Footer </Text>
-            <FloatingLabelInput
-                value={footer}
-                title='Footer'
-                onChangeText={(text: any) => {
-                    setFooter(text);
-                    props.parentUser(footerData);
-                }}
+                <Text>© Copyright <strong> Vesperr. </strong> All Rights Reserved  </Text>
+                <Text>Designed by <strong>BootstrapMade</strong> </Text>
+            <FlatList 
+                data={listMenu}
+                renderItem={({ item }) => (
+                    <Text  style={styles.container}>{item.name}</Text>
+                )}
+                //Setting the number of column
+                numColumns={4}
+            //keyExtractor={(item, index) => index}
             />
         </View>
     );
 }
+const styles = StyleSheet.create({
 
+    container: {
+        flex: 1,
+      //  width: 50,
+      //  height: 45,
+        margin: 15,
+      //  flexDirection: "col",
+     //   marginHorizontal: 50,
+      
+    },
+
+});
 /* Header.defaultProps = {
     menu: [{ name: 'Angola', component: Home() },
     ]
 } */
+Footer.navigationOptions = {
+    title: 'Another Test Screen',
+
+};
+Footer.defaultProps = {
+    listMenu: [{
+        id: 1,
+        name: 'Home'
+    },
+    {
+        id: 2,
+        name: 'About '
+    },
+    {
+        id: 3,
+        name: 'Privacy Policy '
+    },
+    {
+        id: 4,
+        name: 'Term of Use'
+    },
+    ]
+}
 export default Footer;
