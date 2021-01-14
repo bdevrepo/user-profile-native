@@ -23,15 +23,13 @@ const CountsSection = (props: any) => {
 
     return (
         <View >
-            <Text>TODO CountsSection </Text>
-            <FloatingLabelInput
-                value={countsSection}
-                title='CountSection'
-                onChangeText={(text: any) => {
-                    setCountsSection(text);
-                    props.parentUser(countsSectionData);
-                }}
-            />
+            <h2>CountsSection  </h2>
+            <Text> <strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</Text>
+            <Text> <strong>Projects</strong>  adipisci atque cum quia aspernatur totam laudantium et quia dere tan.</Text>
+            <Text> <strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel.</Text>
+            <Text> <strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der.</Text>
+
+        
         </View>
     );
 }

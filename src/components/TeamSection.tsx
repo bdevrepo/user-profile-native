@@ -20,15 +20,17 @@ const TeamSection = (props: any) => {
 
     return (
         <View >
-            <Text>TODO TeamSection </Text>
-            <FloatingLabelInput
-                value={teamSec}
-                title='Team Section'
-                onChangeText={(text: any) => {
-                    setTeamSec(text);
-                    props.parentUser(teamSecData);
-                }}
-            />
+            <h2>Team</h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+            <h4>Walter White</h4>
+            <Text>Chief Executive Officer</Text>
+            <h4>Sarah Jhonson</h4>
+            <Text>Product Manager</Text>
+            <h4>William Anderson</h4>
+            <Text>CTO</Text>
+            <h4>Amanda Jepson</h4>
+            <Text>Accountant</Text>
+
         </View>
     );
 }
